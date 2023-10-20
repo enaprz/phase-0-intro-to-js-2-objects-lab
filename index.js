@@ -6,22 +6,25 @@
 
 function updateEmployeeWithKeyAndValue(employee,key,value){
     const updateEmployee = {...employee}
-    updateEmployee["name"] = "Sam",
-    updateEmployee["streetAddress"] = "11 Broadway"
+    updateEmployee[key] = value
+   
     return updateEmployee
 
 };
 
 function destructivelyUpdateEmployeeWithKeyAndValue(employee,key,value){
-    employee["streetAddress"] = "12 Broadway"
-    return employee }
+    employee[key] = value
+    return employee 
+}
 
       
 function deleteFromEmployeeByKey(employee,key){
 let newEmployee = {...employee};
-delete newEmployee["name"];
-return newEmployee; }
+delete newEmployee[key];
+return newEmployee; 
+}
 
 function destructivelyDeleteFromEmployeeByKey(employee,key){
-    delete employee.name;
-    return employee; }
+    delete employee[key];
+    return employee; 
+}
